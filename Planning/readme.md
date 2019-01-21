@@ -50,4 +50,13 @@ The following is an illustration of a local planner,
 
 <p align="center"> <img src="images/local_planning.PNG"></p>
 
-This approach uses
+This approach uses a Probabilistic Roadmap (PR) as an implementation of a local planner. With PR, nodes are randomly sampled within a region in space (a sphere). Then, nodes that violate safety regions are discarded. That is, nodes that lie within, along, or too close to, an obstacle are rejected. 
+
+The remaining nodes are used to form a graph - a mesh - from which planning to a high level target is done using a modified version of A* (or whichever planner you choose) and a simple heuristic as a cost function, such as euclidean distance. 
+
+PR has the characteristic of being asymptotically complete and asymptotically optimal. This means that in the case of an infinite number of nodes and conncetions between nodes, PR is guaranteed to find a path and have that path be the shortest.
+
+<p align="center"> <img src="images/pr_planning.PNG"></p>
+
+Given real-world hardware contraints, it is incredibly time-consuming and near impossible to find the optimal path for every iteration. However, PR produces paths that are *good-enough* for real-world applications and complete fast enough to be real-time.
+
