@@ -68,11 +68,14 @@ The following video demonstrates the Probabilistic Roadmap local planner. NOTE, 
 
 <p align="center"> <img src="images/pr_mesh.gif"></p>
 
-[full video](https://www.youtube.com/watch?v=24f58EIXmjQ&feature=youtu.be)
-
 The following video demonstrates the drone planning locally toward the next high-level navigation waypoint. The points that pop-up in front of the drone are produced by the Probabilistic Roadmap local planner. The PR planner will plan toward the next high-level waypoint. Recall that the sequence of high-level waypoints are obtained by medial-axis grid. 
 
 Linear and angular velocity are kept fixed by the simulator while in *guided* mode; the mode in which the drone autonomously flies to waypoints. As such, the rate at which the local planner operates is fast enough to keep up with these set velocities. 
+
+<p align="center"> <img src="images/full_planner.gif"></p>
+
+### <p align="center"><b><i>Reality </i></b></p>
+
 
 
 
