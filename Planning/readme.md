@@ -56,7 +56,7 @@ The remaining nodes are used to form a graph - a mesh - from which planning to a
 
 PR has the characteristic of being asymptotically complete and asymptotically optimal. This means that in the case of an infinite number of nodes and conncetions between nodes, PR is guaranteed to find a path and have that path be the shortest.
 
-<p align="center"> <img src="images/pr_planning.PNG"></p>
+<p align="center"> <img src="images/pr_planning.PNG" width="640" height="360"></p>
 
 Given real-world hardware contraints, it is incredibly time-consuming and near impossible to find the optimal path for every iteration. However, PR produces paths that are *good-enough* for real-world applications and complete fast enough to be real-time.
 
