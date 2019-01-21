@@ -42,4 +42,12 @@ This Planning approach uses two motion plans,
 
 ### <p align="center"><b><i>Receding Horizon </i></b></p>
 
+The real-world is dynamic and unpredictable. As such, it is pertinent that autonomous flying vehicles be equipped with mechanisms capable of reacting to sudden changes in environment - another drone, falling debris, birds, toilet-paper rolls, etc. 
 
+Receding Horizon is a concept that employs rapid, local planning toward a target goal.  The area within which the local planner operates is user-defined and depends heavily on the implementation of the local planner (what method is chosen), the hardware of the vehicle, and the rate at which to plan.
+
+The following is an illustration of a local planner,
+
+<p align="center"> <img src="images/local_planning.PNG"></p>
+
+This approach uses
