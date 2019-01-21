@@ -14,6 +14,20 @@ A tremendous amount of thought should go into defining your state and action spa
 
 For example, representing the state space by 3-dimensional voxels of resultion 0.05m most likely introduces significant memory utilization and long update times. Requiring powerful processing units, a larger battery, heavier quadcopter, and significantly reduced flight time. 
 
-<p align="center">
-<img src="images/voxel.PNG" width="250" height="250" >
+<p>
+<align="right" img src="images/voxel.PNG" width="250" height="250" >
+<b align="left"> For example, representing the state space by 3-dimensional voxels of resultion 0.05m most likely introduces significant memory utilization and long update times. Requiring powerful processing units, a larger battery, heavier quadcopter, and significantly reduced flight time.
 </p>
+
+<p>
+ 
+ <p align=right">
+ <img src="images/voxel.PNG" width="250" height="250">
+ </p>
+ 
+ <p align="left">
+ For example, representing the state space by 3-dimensional voxels of resultion 0.05m most likely introduces significant memory   
+utilization and long update times. Requiring powerful processing units, a larger battery, heavier quadcopter, and significantly reduced  flight time.
+ </p>
+ 
+ </p>
