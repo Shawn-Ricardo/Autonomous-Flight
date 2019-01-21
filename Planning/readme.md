@@ -48,7 +48,7 @@ Receding Horizon is a concept that employs rapid, local planning toward a target
 
 The following is an illustration of a local planner,
 
-<p align="center"> <img src="images/local_planning.PNG"></p>
+<p align="center"> <img src="images/local_planning.PNG" width="640" height="360"></p>
 
 This approach uses a Probabilistic Roadmap (PR) as an implementation of a local planner. With PR, nodes are randomly sampled within a region in space (a sphere). Then, nodes that violate safety regions are discarded. That is, nodes that lie within, along, or too close to, an obstacle are rejected. 
 
