@@ -37,8 +37,8 @@ From here, running a well-known grid-based path planner, such as A*, on the medi
 
 This Planning approach uses two motion plans,
 
-1) the global plan, implemented via medial-axis, which provides high-level guidance
-2) receding horizon using a probabilistic roadmap.
+1) Medial-Axis Global Plan - provides high-level guidance
+2) Receding Horizon via a Probabilistic Roadmap - allows for real-time planning within a finite space.
 
 ### <p align="center"><b><i>Receding Horizon </i></b></p>
 
