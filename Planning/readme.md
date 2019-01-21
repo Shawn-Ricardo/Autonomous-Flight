@@ -74,6 +74,9 @@ Linear and angular velocity are kept fixed by the simulator while in *guided* mo
 
 <p align="center"> <img src="images/full_planner.gif"></p>
 
+[full video goal 1](https://www.youtube.com/watch?v=_OQJwqXbQVw&feature=youtu.be)
+[full video goal 2](https://www.youtube.com/watch?v=KUoBN9De5qM&feature=youtu.be)
+
 ### <p align="center"><b><i>Reality </i></b></p>
 
 
