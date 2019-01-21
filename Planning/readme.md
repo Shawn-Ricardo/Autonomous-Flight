@@ -1,4 +1,4 @@
- # <p align="center"><b> Medial-Axis with Probabilistic Roadmap </b></p>
+# <p align="center"><b> Medial-Axis with Probabilistic Roadmap </b></p>
  
 Planning is a crucial aspect of any autonomous agent. There exist a vast number of methods that attempt to solve this problem. From physical models that describe the intricate dynamics of the object to the black boxes of reinforcement learning. This problem is still an active area of research. 
 
@@ -14,20 +14,8 @@ A tremendous amount of thought should go into defining your state and action spa
 
 For example, representing the state space by 3-dimensional voxels of resultion 0.05m most likely introduces significant memory utilization and long update times. Requiring powerful processing units, a larger battery, heavier quadcopter, and significantly reduced flight time. 
 
-<p>
-<align="right" img src="images/voxel.PNG" width="250" height="250" >
-<b align="left"> For example, representing the state space by 3-dimensional voxels of resultion 0.05m most likely introduces significant memory utilization and long update times. Requiring powerful processing units, a larger battery, heavier quadcopter, and significantly reduced flight time.
+<p align="center"> 
+<img src="images/voxel_map.PNG" width="250" height="250">
 </p>
 
-<p>
  
- <p align=right">
- <img src="images/voxel.PNG" width="250" height="250">
- </p>
- 
- <p align="left">
- For example, representing the state space by 3-dimensional voxels of resultion 0.05m most likely introduces significant memory   
-utilization and long update times. Requiring powerful processing units, a larger battery, heavier quadcopter, and significantly reduced  flight time.
- </p>
- 
- </p>
