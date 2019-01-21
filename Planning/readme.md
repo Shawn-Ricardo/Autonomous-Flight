@@ -66,6 +66,6 @@ The simulator can be downloaded [here](https://github.com/udacity/FCND-Simulator
 
 The following video demonstrates the Probabilistic Roadmap local planner. NOTE, colliders.csv is the 2.5D map. This map does not align 1:1 with the simulation. The portions of space that are removed from the PR mesh represent this misalignment. In reality, point cloud sensor information would be used to plan locally.
 
-<p align="center"> <img src="images/pr_mesh.gif"></p>
-<p align="center"><small>[full video](https://www.youtube.com/watch?v=24f58EIXmjQ&feature=youtu.be)</small></p>
+[full video](https://www.youtube.com/watch?v=24f58EIXmjQ&feature=youtu.be)
+
 
