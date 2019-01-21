@@ -75,10 +75,20 @@ Linear and angular velocity are kept fixed by the simulator while in *guided* mo
 <p align="center"> <img src="images/full_planner.gif"></p>
 
 [full video goal 1](https://www.youtube.com/watch?v=_OQJwqXbQVw&feature=youtu.be)
+
 [full video goal 2](https://www.youtube.com/watch?v=KUoBN9De5qM&feature=youtu.be)
 
 ### <p align="center"><b><i>Reality </i></b></p>
 
+The following demonstrates another implementation of a 2-prong planner.
+
+The high-level planner is implemented by GPS waypoints. One waypoint is before the tree line and the other waypoint is after the tree line, in the parking lot. 
+
+The local planner will plan several meters in front of the drone and utilizes a [Rapidly-Exploring Random Tree](https://en.wikipedia.org/wiki/Rapidly-exploring_random_tree)(RRT) to generate a 3-dimensional path under and between the trees in real-time. 
+
+*NOTE: The local planner and the global planner exist in different reference frames. The global planner exists in the global reference frame that GPS operates within. While the local planner exists in a local reference frame, usually where the quadcopter starts. In order for these reference frames to sync, a transformation between frames is needed. Pleaser view global_to_local() for this transform.*
+
+To capture the environment, a voxel map is constructed in real-time with a resolution of 0.5 meters. The data to populate this voxel map is obtained from a point-cloud using a stereo-camera. 
 
 
-
+<p align="center"> <img src="images/real_world.gif"></p>
