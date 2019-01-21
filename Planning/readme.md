@@ -60,3 +60,12 @@ PR has the characteristic of being asymptotically complete and asymptotically op
 
 Given real-world hardware contraints, it is incredibly time-consuming and near impossible to find the optimal path for every iteration. However, PR produces paths that are *good-enough* for real-world applications and complete fast enough to be real-time.
 
+### <p align="center"><b><i>Simulation </i></b></p>
+
+The simulator can be downloaded [here](https://github.com/udacity/FCND-Simulator-Releases/releases). Launch the simulator, then run __python probabilistic_roadmap.py__. You can provide latitude and longitude as arguments, just make sure they correspond to locations on the ground. If no lat/long are given, a set of hardcoded goal locations is used.
+
+The following video demonstrates the Probabilistic Roadmap local planner. NOTE, colliders.csv is the 2.5D map. This map does not align 1:1 with the simulation. The portions of space that are removed from the PR mesh represent this misalignment. In reality, point cloud sensor information would be used to plan locally.
+
+<p align="center"> <img src="images/pr_mesh.gif"></p>
+
+
