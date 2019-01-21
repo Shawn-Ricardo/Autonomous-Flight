@@ -15,7 +15,7 @@ A tremendous amount of thought should go into defining your state and action spa
 For example, representing the state space by 3-dimensional voxels of resultion 0.05m most likely introduces significant memory utilization and long update times. Requiring powerful processing units, a larger battery, heavier quadcopter, and significantly reduced flight time. 
 
 <p align="center"> <img src="images/voxel_map.png"></p>
-<p align="center"><small><i>google images</i></small></p>
+<p align="center"><small><i>a voxel map</i></small></p>
  
 This approach assumes the the altitude of the quadcopter is fixed as it navigates through a simulation of San Francisco. As such, a 2.5D map is utilized to create a grid state space.
 
