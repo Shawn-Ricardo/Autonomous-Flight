@@ -23,12 +23,23 @@ The following is a representation of a 2.5D map,
 
 <p align="center"> <img src="images/two_half.PNG"></p>
 
-In essence, a 2.5D map allows for obstacles to be stored in a 2D grid and the height of that obstacle to be stored as the entry within that cell. Notice that the resolution of obstacles is lost. Planning tight maneuvers around them won't be possible. However, it is usually a bad idea to fly a vehicle very close to an object, such as a building, tree, or car.
-
-
-
-Using a grid allows for numerous existing algorithms to be applied to the path planning problem. One in particular is Medial-Axis. Med
- 
-This approach using a 2-prong planner: 1) a global plan and 2) local planner
+In essence, a 2.5D map allows for obstacles to be stored efficiently as a 2D grid and the height of that obstacle to be stored as the entry within that cell. Notice that the resolution of obstacles is lost. Planning tight maneuvers around them won't be possible. However, it is usually a bad idea to fly a vehicle very close to, or under, an object, such as a building, bridge, tree, or car. In practice, 2.5D maps work very well and are widely adopted as an efficient means to storing obstacle data.
 
 ### <p align="center"><b><i>Global Plan</i></b></p>
+
+Using a grid to represent the state space allows for numerous existing algorithms to be applied to the path planning problem. One in particular is Medial-Axis. 
+
+[Medial-Axis](https://en.wikipedia.org/wiki/Medial_axis) forms the basis of Voronoi Graphs and finds cells that are equi-distant to two different obstacles. By applying a medial-axis transform to our 2.5D grid, I obtain another grid whose cells are farthest from obstacles, inherently fusing safety into the grid.
+
+<p align="center"> <img src="images/medial_axis_transform.PNG"></p>
+
+From here, running a well-known grid-based path planner, such as A*, on the medial-axis grid, will obtain the shortest path from the starting location to the goal state.
+
+This Planning approach uses two motion plans,
+
+1) the global plan, implemented via medial-axis, which provides high-level guidance
+2) receding horizon using a probabilistic roadmap.
+
+### <p align="center"><b><i>Receding Horizon </i></b></p>
+
+
