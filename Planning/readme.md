@@ -17,5 +17,3 @@ For example, representing the state space by 3-dimensional voxels of resultion 0
 <p align="center"> <img src="images/voxel_map.png"></p>
 <p align="center"><small><i>google images</i></small></p>
  
- 
- 
