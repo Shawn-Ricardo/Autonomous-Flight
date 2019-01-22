@@ -94,12 +94,57 @@ The Yaw Controller is a P controller that finds the error between the target yaw
 
 ### <p align="center"><b><i>Simulation </i></b></p>
 
-The simulator repo can be cloned [here](https://github.com/udacity/FCND-Controls-CPP.git). Please follow the steps for settings up the environment on your machine and using the simulator.
+The simulator repo can be cloned [here](https://github.com/udacity/FCND-Controls-CPP.git). Please follow the steps for settings up the environment on your machine and using the simulator. 
 
-The only modifications needed is the replacement of two files.
+The simulator is not visually pleasing, but it models the physics of a quadrotor with incredible fidelity!
+
+The only modifications needed to run the simulator with the code in this repo is the replacement of two files:
+
 1) QuadControl.cpp -> replaces existing QuadControl.cpp at <simulator>/src. This code contains the Cascaded PID Controller.
-2) QuadControlParams.txt -> replaces existing document at <simulator>/config. This code contains the PID gains for each respective controller.
+2) QuadControlParams.txt -> replaces existing document at <simulator>/config. This code contains the PID gains for each respective controller. 
+
+
+<p align="center"><i> Scenario 2 - Body-Rate & Roll/Pitch Control </i></p>
  
  
+In Scenario 2, the quad will start above the origin and is **created with a small initial rotation speed about its roll axis**. The controller should stabilize the rotational motion and bring the vehicle back to level attitude. A successful run is such that the roll of the vehicle is 0 while other rates remain 0.
+
+Note that a successful run is indicated by a *green highlight* around the corresponding graph.
+
+
+<p align="center"> <img src="images/scenario_2.gif"></p>
+
+
+<p align="center"><i> Scenario 3 - Position/Velocity/Yaw Control </i></p>
+
+Scenario 3 will control the position, altitude, and yaw for a pair of quads. 2 identical quads will be created where one is offset from its target point (but initialized with yaw = 0) and the second is offset from target point, but yaw = 45 degrees. A successful run has the quads going to their destination points and tracking error should be going down (view graph). However, *one quad remains rotated in yaw*.
+
+<p align="center"> <img src="images/scenario_3.gif"></p>
+
+<p align="center"><i> Scenario 4 - Non-Idealities & Robustness </i></p>
+
+This is a configuration with 3 quads that are all are trying to move one meter forward. However, these quads are all a bit different:
+
+1) The green quad has its center of mass shifted back
+2) The orange vehicle is an ideal quad
+3) The red vehicle is heavier than usual
+
+A successful scenario should have all quads reaching their target 3D position with correct orientation.
+
+<p align="center"> <img src="images/scenario_4.gif"></p>
+
+<p align="center"><i> Scenario 5 - Tracking A Trajectory </i></p>
+
+This scenario has two quadcopters:
+
+1) the orange quad is following traj/FigureEight.txt
+
+2) the yellow quad is following traj/FigureEight**FF**.txt, where desired acceleration is fed forward into the controller. 
+
+<p align="center"> <img src="images/feed_forward.PNG"></p>
+
+By feeding the controller a desired acceleration, it works to center the controller error around a target acceleration and make changes based on the error in position and velocity.
+
+<p align="center"> <img src="images/scenario_5.gif"></p>
 
 
