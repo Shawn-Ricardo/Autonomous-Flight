@@ -71,3 +71,9 @@ Thus, the control knobs for dictating the quadrotor orientation are these rotati
 Lastly, b_dot^x-c is the P error of the desired rotation matrix value and the current rotation matrix value. Using the equation on the bottom, I can then use the commanded accelerations and thrust to set a target rotation matrix value and use the error in the target value and current value to generate a new q and p for the quad to implement.
 
 <p align="center"><i> Lateral Controller </i></p>
+
+The Lateral Controller is a simple PD controller that uses the error in position and velocity in the x and y axes to output a target x and y acceleration. Though simple, it is important to limit speed and acceleration in these directions.
+
+<p align="center"><i> Altitude Controller </i></p>
+
+The Altitude Controller is a simple PID controller that uses Feed-Forward input to control the collective thrust of the quadcopter. Note that 
