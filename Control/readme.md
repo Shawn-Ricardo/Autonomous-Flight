@@ -1,5 +1,7 @@
 # <p align="center"><b> Cascaded PID Controller </b></p>
 
+### <p align="center"><b><i> Forces & Moments </i></b></p>
+
 The control of an autonomous flying vehicle boils down to the following objective: Given a trajectory, find the sequence of propeller turn rates that will cause the drone to fly that trajectory. 
 
 A trajectory is a sequence of 3-dimensional positions, desired yaw (heading) and times at which to be in these locations.
