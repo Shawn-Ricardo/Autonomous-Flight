@@ -141,7 +141,7 @@ This scenario has two quadcopters:
 
 2) the yellow quad is following traj/FigureEight**FF**.txt, where desired acceleration is fed forward into the controller. 
 
-<p align="center"> <img src="images/feed_forward.PNG"></p>
+<p align="center"> <img src="images/feed_forward.PNG" width="480"></p>
 
 By feeding the controller a desired acceleration, it works to center the controller error around a target acceleration and make changes based on the error in position and velocity.
 
