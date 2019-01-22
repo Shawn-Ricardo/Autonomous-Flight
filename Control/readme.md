@@ -62,7 +62,7 @@ The inputs into the Roll-Pitch Controller are the commanded thrust, the commande
 
 The drone generates lateral acceleration by changing the body orientation which results in non-zero thrust in the desired direction. The components of the thrust can be describes by the following set of equations,
 
-<p align="center"> <img src="images/roll_pitch_1.PNG"  width="640"></p>
+<p align="center"> <img src="images/roll_pitch_1.PNG"  width="480"></p>
 
 where b^x and b^y are elements of the rotation matrix that map body frame thrust to their corresponding world frame accelerations.
 
