@@ -147,4 +147,8 @@ By feeding the controller a desired acceleration, it works to center the control
 
 <p align="center"> <img src="images/scenario_5.gif"></p>
 
+### <p align="center"><b><i> Reality </i></b></p>
 
+The following is a custom built quadcopter executing a figure-8 in real-time. The video has been sped up because I set the velocity to a low value.
+
+<p align="center"> <img src="images/reality.gif" ></p>
