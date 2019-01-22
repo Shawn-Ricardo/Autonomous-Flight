@@ -26,4 +26,4 @@ Yaw is an interesting case, in that this motion is the result of the *reactive* 
 
 ### <p align="center"><b><i>Closed Loop Control </i></b></p>
 
-<p align="center"> <img src="images/closed_loop_control.PNG"></p>
+<p align="center"> <img src="images/closed_loop_control.PNG" width="640" ></p>
