@@ -58,11 +58,11 @@ The Roll-Pitch Controller is a P controller responsible for commanding the roll 
 The inputs into the Roll-Pitch Controller are the commanded thrust, the commanded x/y accelerations, and the current attitude of the quad. In order to translate rotation rates in the body rate into rotation rates in the world frame, a rotation matrix describing these properties is used.
 
 
-<p align="center"> <img src="images/rotation_matrix.PNG" width="210" height="60"></p>
+<p align="center"> <img src="images/rotation_matrix.PNG"></p>
 
 The drone generates lateral acceleration by changing the body orientation which results in non-zero thrust in the desired direction. The components of the thrust can be describes by the following set of equations,
 
-<p align="center"> <img src="images/roll_pitch_1.PNG" width="210" height="60"></p>
+<p align="center"> <img src="images/roll_pitch_1.PNG"></p>
 
 where b^x and b^y are elements of the rotation matrix that map body frame thrust to their corresponding world frame accelerations.
 
