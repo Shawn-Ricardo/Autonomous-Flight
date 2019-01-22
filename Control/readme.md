@@ -84,4 +84,10 @@ where b^x, b^y, and b^z are corresponding rotation matrix entries. Thus, using a
 
 <p align="center"> <img src="images/thrust_command.PNG"></p>
 
+where u_bar is the PID error.
+
 Note: the inputs into the Altitude Controller are obtained from the trajectory. Every point along the trajectory has a desired 3D position, velocity, orientation, and time.
+
+### <p align="center"><b><i>Simulation </i></b></p>
+
+
