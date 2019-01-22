@@ -22,3 +22,6 @@ The image above is a simplified version but the concepts carry over easily to 3-
 
 Yaw is an interesting case, in that this motion is the result of the *reactive* rotational forces induced by the spinning propellers. Each propeller produces a rotational force that is **opposite** the direction of its spin. Yaw is directly propotional to the rotational acceleration of a propeller. 
 
+# <p align="center"><b><i>Closed Loop Control </i></b></p>
+
+<p align="center"> <img src="images/closed_loop_control.PNG"></p>
