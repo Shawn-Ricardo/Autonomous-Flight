@@ -6,7 +6,7 @@ A trajectory is a sequence of 3-dimensional positions, desired yaw (heading) and
 
 In order to place the quadcopter at a desired position with a desired heading, we must control the rotation rates of the propellers. Doing so in such a manner that the net force and net moment acting on the quadcopter will cause it to exhibit the desired position and orientation at the desired timestep.
 
-<p align="center"> <img src="images/quad_forces.PNG"></p>
+<p align="center"> <img src="images/quad_forces.PNG" width="640" height="360"></p>
 
 The illustration above is simplified, only showing forces applied in the horizontal and vertical directions. However, the physics are easily extended when stepping into the 3-dimensional world.
 
@@ -14,7 +14,7 @@ Each propeller generates a thrust vector - a force. To obtain the vertical force
 
 Once the vertical and horizontal accelerations are obtained, the translation of the quadrotor can be easily found by integrating twice over some timestep, dt.
 
-<p align="center"> <img src="images/quad_moments.PNG"></p>
+<p align="center"> <img src="images/quad_moments.PNG" width="640" height="360"></p>
 
 The rotational movement of the quadcopter is obtained by finding the net moment about the x-axis, y-axis, and z-axis, individually. Movement of the quadcopter about the x-axis is called roll, movement about the y-axis is called pitch, and movement about the z-axis is called yaw.
 
