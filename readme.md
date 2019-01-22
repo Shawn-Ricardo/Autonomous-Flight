@@ -5,3 +5,7 @@ Moving a vehicle from goal to destination is a fundamental problem in autonomous
 ## <p align="center"> <b> Control </b> </p>
 
 work in progress...
+
+## <p align="center"> <b> Estimation </b> </p>
+
+coming soon
