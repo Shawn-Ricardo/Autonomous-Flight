@@ -47,7 +47,7 @@ The Body Rate Controller takes as input the *commanded* x, y, and z, body rates 
 
 The Body Rate Controller is a P controller and measures the difference between the current body rate and the commanded body rate (from higher level controllers). This error is then used to find the desired torque, or moment, about a respective axis,
 
-<p align="center"> <img src="images/moment.PNG" width="180" height="90"></p>
+<p align="center"> <img src="images/moment.PNG" width="240" height="60"></p>
 
 where alpha is the P error and I is an inertial measurement that describes propensity for an object to rotate.
 
