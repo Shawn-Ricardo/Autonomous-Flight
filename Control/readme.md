@@ -26,11 +26,11 @@ Yaw is an interesting case, in that this motion is the result of the *reactive* 
 
 ### <p align="center"><b><i>Closed Loop Control </i></b></p>
 
-<p align="center"> <img src="images/control1.PNG" width="640" height="360"></p>
+<p align="center"> <img src="images/control1.png" width="640" height="360"></p>
 
 The attitude controller can be further broken down into the following components,
 
-<p align="center"> <img src="images/control2.PNG" width="640" height="360"></p>
+<p align="center"> <img src="images/control2.png" width="640" height="360"></p>
 
 The diagram above is a representation of a high-level controller arhchitecture that is typically found on most quadcopter flight control units, such as Ardupilot and PX4. 
 
@@ -51,7 +51,7 @@ The Body Rate Controller takes as input the *commanded* x, y, and z, body rates 
 
 The Body Rate Controller is a P controller and measures the difference between the current body rate and the commanded body rate (from higher level controllers). This error is then used to find the desired torque, or moment, about a respective axis,
 
-<p align="center"> <img src="images/moment.PNG" width="210" height="60"></p>
+<p align="center"> <img src="images/moment.PNG]]" width="210" height="60"></p>
 
 where alpha is the P error and I is an inertial measurement that describes propensity for an object to rotate. Lastly, these torques are turned into actual rotor spin rates for the quad to implement.
 
