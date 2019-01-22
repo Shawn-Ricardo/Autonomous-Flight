@@ -43,4 +43,17 @@ A state vector of length 12 to represent and control the quadcopter in 3-dimensi
 
  <p align="center"><i> Body Rate Controller </i></p>
  
-This controller will operate at a faster frequency than the outer loop controllers because
+The Body Rate Controller takes as input the *commanded* x, y, and z, body rates and actual body rates (which are measured by an IMU). The controller then outputs *moments* that the quad needs to obtain the desired action.
+
+The Body Rate Controller is a P controller and measures the difference between the current body rate and the commanded body rate (from higher level controllers). This error is then used to find the desired torque, or moment, about a respective axis,
+
+<p align="center"> <img src="images/moment.PNG"></p>
+
+where alpha is the P error and I is an inertial measurement that describes propensity for an object to rotate.
+
+<p align="center"><i> Roll-Pitch Controller </i></p>
+ 
+
+
+
+
