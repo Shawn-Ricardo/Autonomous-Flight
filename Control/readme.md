@@ -88,6 +88,18 @@ where u_bar is the PID error.
 
 Note: the inputs into the Altitude Controller are obtained from the trajectory. Every point along the trajectory has a desired 3D position, velocity, orientation, and time.
 
+<p align="center"><i> Yaw Controller </i></p>
+
+The Yaw Controller is a P controller that finds the error between the target yaw (obtained from trajectory) and the drone's current yaw. Since this command is in radians, be sure to limit the value between [-pi,pi].
+
 ### <p align="center"><b><i>Simulation </i></b></p>
+
+The simulator repo can be cloned [here](https://github.com/udacity/FCND-Controls-CPP.git). Please follow the steps for settings up the environment on your machine and using the simulator.
+
+The only modifications needed is the replacement of two files.
+1) QuadControl.cpp -> replaces existing QuadControl.cpp at <simulator>/src. This code contains the Cascaded PID Controller.
+2) QuadControlParams.txt -> replaces existing document at <simulator>/config. This code contains the PID gains for each respective controller.
+ 
+ 
 
 
