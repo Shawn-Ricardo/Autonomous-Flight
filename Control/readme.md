@@ -72,8 +72,16 @@ Lastly, b_dot^x-c is the P error of the desired rotation matrix value and the cu
 
 <p align="center"><i> Lateral Controller </i></p>
 
-The Lateral Controller is a simple PD controller that uses the error in position and velocity in the x and y axes to output a target x and y acceleration. Though simple, it is important to limit speed and acceleration in these directions.
+The Lateral Controller is a PD controller that uses the error in position and velocity in the x and y axes to output a target x and y acceleration. Though simple, it is important to limit speed and acceleration in these directions. Note that the input to the lateral controller are desired positions and velocities given by the *trajectory*. 
 
 <p align="center"><i> Altitude Controller </i></p>
 
-The Altitude Controller is a simple PID controller that uses Feed-Forward input to control the collective thrust of the quadcopter. Note that 
+The Altitude Controller is a PID controller that uses Feed-Forward input to control the vertical component of the thrust in order to obtain a desired vertical acceleration. The thrust component can be decomposed into the following parts, 
+
+<p align="center"> <img src="images/thrust_components.PNG"  width="480"></p>
+
+where b^x, b^y, and b^z are corresponding rotation matrix entries. Thus, using a PID, find the error in acceleration and then convert this error into a thrust command,
+
+<p align="center"> <img src="images/thrust_command.PNG"  width="480"></p>
+
+Note: the inputs into the Altitude Controller are obtained from the trajectory. Every point along the trajectory has a desired 3D position, velocity, orientation, and time.
