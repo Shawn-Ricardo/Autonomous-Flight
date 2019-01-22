@@ -78,10 +78,10 @@ The Lateral Controller is a PD controller that uses the error in position and ve
 
 The Altitude Controller is a PID controller that uses Feed-Forward input to control the vertical component of the thrust in order to obtain a desired vertical acceleration. The thrust component can be decomposed into the following parts, 
 
-<p align="center"> <img src="images/thrust_components.PNG"  width="480"></p>
+<p align="center"> <img src="images/thrust_components.PNG"></p>
 
 where b^x, b^y, and b^z are corresponding rotation matrix entries. Thus, using a PID, find the error in acceleration and then convert this error into a thrust command,
 
-<p align="center"> <img src="images/thrust_command.PNG"  width="480"></p>
+<p align="center"> <img src="images/thrust_command.PNG"></p>
 
 Note: the inputs into the Altitude Controller are obtained from the trajectory. Every point along the trajectory has a desired 3D position, velocity, orientation, and time.
