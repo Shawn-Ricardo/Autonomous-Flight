@@ -28,7 +28,19 @@ Yaw is an interesting case, in that this motion is the result of the *reactive* 
 
 <p align="center"> <img src="images/cascaded_architecture.PNG" width="640" ></p>
 
-The above diagram is a general representation of a closed loop controller. For simplicity, suppose the quadcopter only moves in the z-direction; that is, vertically up or down. With respect to the above diagram, *reference* is the target z position, *controller* is a code block that determines the required thrust to arrive at the target position, *input* is this commanded thrust value, *output* is the true height of the quadcopter, *sensor* is assumed to be a perfect sensor capable of reading the quadcopter's altitude, *measured output* is the measured value from the sensor, and *measured error* is the difference between the target and actual altitude.
+The diagram above is a representation of a high-level controller arhchitecture that is typically found on most quadcopter flight control units, such as Ardupilot and PX4. 
 
+With only 4 thrust vectors and 6 degrees of freedom, only 4 of these degrees of freedom can be controlled at any one time. In practice, the translation (x,y, and z movement) and yaw of the quadcopter are controlled. This decision to control the translation and yaw of the quadrotor led to the design of the above cascaded control architecture.
 
+A state vector of length 12 to represent and control the quadcopter in 3-dimensions. These 12 variables are:
 
+1) x position, y position, z position
+2) x velocity, y velocity, z velocity
+3) roll, pitch, yaw in the world frame, representated by Euler angles
+4) x-axis body rate (p), y-axis body rate (q), z-axis body rate (r)
+
+*Note*: Item #5 describes the angular rotation rates (radians/s) about the **body frame** x-axis, y-axis, and z-axis, while item #4 describes the angle (radians) at which the quadcopter is oriented in the **world frame**.
+
+ <p align="center"><i> Body Rate Controller </i></p>
+ 
+This controller will operate at a faster frequency than the outer loop controllers because
