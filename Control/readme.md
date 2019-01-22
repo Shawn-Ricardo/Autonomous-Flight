@@ -27,3 +27,6 @@ Yaw is an interesting case, in that this motion is the result of the *reactive* 
 ### <p align="center"><b><i>Closed Loop Control </i></b></p>
 
 <p align="center"> <img src="images/closed_loop_control.PNG" width="640" ></p>
+
+The above diagram is a general representation of a closed loop controller. For simplicity, suppose the quadcopter only moves in the z-direction; that is, vertically up or down. With respect to the above diagram, *reference* is the target z position, *controller* is a code block that determines the required thrust to arrive at the target position, *input* is this commanded thrust value, *output* is the true height of the quadcopter, *sensor* is assumed to be a perfect sensor capable of reading the quadcopter's altitude, and *measured output* is the measured value from the sensor. 
+
