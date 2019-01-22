@@ -53,9 +53,21 @@ where alpha is the P error and I is an inertial measurement that describes prope
 
 <p align="center"><i> Roll-Pitch Controller </i></p>
  
-The Roll-Pitch Controller is a P controller responsible for commanding the roll and pitch rates (p and q) in the body frame. 
+The Roll-Pitch Controller is a P controller responsible for commanding the roll and pitch rates (p and q) in the body frame; note that yaw is dictated by a separate controller.
 
-In order to translate rotation rates in the body rate into rotation rates in the world frame, a rotation matrix describing these principles is used.
+The inputs into the Roll-Pitch Controller are the commanded thrust, the commanded x/y accelerations, and the current attitude of the quad. In order to translate rotation rates in the body rate into rotation rates in the world frame, a rotation matrix describing these properties is used.
 
 
+<p align="center"> <img src="images/rotation_matrix.PNG" width="210" height="60"></p>
 
+The drone generates lateral acceleration by changing the body orientation which results in non-zero thrust in the desired direction. The components of the thrust can be describes by the following set of equations,
+
+<p align="center"> <img src="images/roll_pitch_1.PNG" width="210" height="60"></p>
+
+where b^x and b^y are elements of the rotation matrix that map body frame thrust to their corresponding world frame accelerations.
+
+Thus, the control knobs for dictating the quadrotor orientation are these rotation matrix elements and these are the elements that the Roll-Pitch Controller will be setting in order to control motion.
+
+Lastly, b_dot^x-c is the P error of the desired rotation matrix value and the current rotation matrix value. Using the equation on the bottom, I can then use the commanded accelerations and thrust to set a target rotation matrix value and use the error in the target value and current value to generate a new q and p for the quad to implement.
+
+<p align="center"><i> Lateral Controller </i></p>
